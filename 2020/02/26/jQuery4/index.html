@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery-事件 | Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一·、AJAX用jQuery的相关对象来处理AJAX，不但不需要考虑浏览器问题，代码也能大大简化。  ajax    jQuery在全局对象jQuery（也就是$）绑定了ajax()函数，可以处理AJAX请求。ajax(url, settings)函数需要接收一个URL和一个可选的settings对象，常用的选项如下： 123456789101112131415161718async：是否异步执行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-事件">
+<meta property="og:url" content="http://yoursite.com/2020/02/26/jQuery4/index.html">
+<meta property="og:site_name" content="Galaxy">
+<meta property="og:description" content="一·、AJAX用jQuery的相关对象来处理AJAX，不但不需要考虑浏览器问题，代码也能大大简化。  ajax    jQuery在全局对象jQuery（也就是$）绑定了ajax()函数，可以处理AJAX请求。ajax(url, settings)函数需要接收一个URL和一个可选的settings对象，常用的选项如下： 123456789101112131415161718async：是否异步执行">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-26T07:37:00.000Z">
+<meta property="article:modified_time" content="2020-03-01T12:40:11.890Z">
+<meta property="article:author" content="Lsiree">
+<meta property="article:tag" content="-jQuery">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Galaxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Galaxy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/jQuery4/" class="article-date">
+  <time datetime="2020-02-26T07:37:00.000Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-事件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一·、AJAX"><a href="#一·、AJAX" class="headerlink" title="一·、AJAX"></a>一·、AJAX</h3><p>用jQuery的相关对象来处理AJAX，不但不需要考虑浏览器问题，代码也能大大简化。</p>
+<ol>
+<li>ajax  </li>
+</ol>
+<p>jQuery在全局对象jQuery（也就是$）绑定了ajax()函数，可以处理AJAX请求。ajax(url, settings)函数需要接收一个URL和一个可选的settings对象，常用的选项如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">async：是否异步执行AJAX请求，默认为true，千万不要指定为false；</span><br><span class="line"></span><br><span class="line">method：发送的Method，缺省为&#39;GET&#39;，可指定为&#39;POST&#39;、&#39;PUT&#39;等；</span><br><span class="line"></span><br><span class="line">contentType：发送POST请求的格式，默认值为&#39;application&#x2F;x-www-form-urlencoded; charset&#x3D;UTF-8&#39;，也可以指定为text&#x2F;plain、application&#x2F;json；</span><br><span class="line"></span><br><span class="line">data：发送的数据，可以是字符串、数组或object。如果是GET请求，data将被转换成query附加到URL上，如果是POST请求，根据contentType把data序列化成合适的格式；</span><br><span class="line"></span><br><span class="line">headers：发送的额外的HTTP头，必须是一个object；</span><br><span class="line"></span><br><span class="line">dataType：接收的数据格式，可以指定为&#39;html&#39;、&#39;xml&#39;、&#39;json&#39;、&#39;text&#39;等，缺省情况下根据响应的Content-Type猜测。</span><br><span class="line"></span><br><span class="line">下面的例子发送一个GET请求，并返回一个JSON格式的数据：</span><br><span class="line"></span><br><span class="line">var jqxhr &#x3D; $.ajax(&#39;&#x2F;api&#x2F;categories&#39;, &#123;</span><br><span class="line">    dataType: &#39;json&#39;</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F; 请求已经发送了</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>我们可以用链式写法来处理各种回调：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function ajaxLog(s) &#123;</span><br><span class="line">    var txt &#x3D; $(&#39;#test-response-text&#39;);</span><br><span class="line">    txt.val(txt.val() + &#39;\n&#39; + s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(&#39;#test-response-text&#39;).val(&#39;&#39;);</span><br><span class="line"></span><br><span class="line">var jqxhr &#x3D; $.ajax(&#39;&#x2F;api&#x2F;categories&#39;, &#123;</span><br><span class="line">    dataType: &#39;json&#39;</span><br><span class="line">&#125;).done(function (data) &#123;</span><br><span class="line">    ajaxLog(&#39;成功, 收到的数据: &#39; + JSON.stringify(data));</span><br><span class="line">&#125;).fail(function (xhr, status) &#123;</span><br><span class="line">    ajaxLog(&#39;失败: &#39; + xhr.status + &#39;, 原因: &#39; + status);</span><br><span class="line">&#125;).always(function () &#123;</span><br><span class="line">    ajaxLog(&#39;请求完成: 无论成功或失败都会调用&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>get<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">对常用的AJAX操作，jQuery提供了一些辅助方法。由于GET请求最常见，所以jQuery提供了get()方法，可以这么写：</span><br><span class="line"></span><br><span class="line">var jqxhr &#x3D; $.get(&#39;&#x2F;path&#x2F;to&#x2F;resource&#39;, &#123;</span><br><span class="line">    name: &#39;Bob Lee&#39;,</span><br><span class="line">    check: 1</span><br><span class="line">&#125;);</span><br><span class="line">第二个参数如果是object，jQuery自动把它变成query string然后加到URL后面，实际的URL是：</span><br><span class="line"></span><br><span class="line">&#x2F;path&#x2F;to&#x2F;resource?name&#x3D;Bob%20Lee&amp;check&#x3D;1</span><br><span class="line">这样我们就不用关心如何用URL编码并构造一个query string了。</span><br></pre></td></tr></table></figure></li>
+<li>post<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">post()和get()类似，但是传入的第二个参数默认被序列化为application&#x2F;x-www-form-urlencoded：</span><br><span class="line"></span><br><span class="line">var jqxhr &#x3D; $.post(&#39;&#x2F;path&#x2F;to&#x2F;resource&#39;, &#123;</span><br><span class="line">    name: &#39;Bob Lee&#39;,</span><br><span class="line">    check: 1</span><br><span class="line">&#125;);</span><br><span class="line">实际构造的数据name&#x3D;Bob%20Lee&amp;check&#x3D;1作为POST的body被发送。</span><br></pre></td></tr></table></figure></li>
+<li>getJSON<br>由于JSON用得越来越普遍，所以jQuery也提供了getJSON()方法来快速通过GET获取一个JSON对象：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var jqxhr &#x3D; $.getJSON(&#39;&#x2F;path&#x2F;to&#x2F;resource&#39;, &#123;</span><br><span class="line">    name: &#39;Bob Lee&#39;,</span><br><span class="line">    check: 1</span><br><span class="line">&#125;).done(function (data) &#123;</span><br><span class="line">    &#x2F;&#x2F; data已经被解析为JSON对象了</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>安全限制<br>jQuery的AJAX完全封装的是JavaScript的AJAX操作，所以它的安全限制和前面讲的用JavaScript写AJAX完全一样。</li>
+</ol>
+<p>如果需要使用JSONP，可以在ajax()中设置jsonp: ‘callback’，让jQuery实现JSONP跨域加载数据。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/jQuery4/" data-id="ck791esxx001wpounadvx5j39" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/26/jQuery2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery-事件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/26/jQuery1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery-操作DOM</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">-Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">-Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">-Git</a> <a href="/tags/JavaScript/" style="font-size: 20px;">-JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">-jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/27/jQuery5/">jQuery-编写插件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery3/">jQuery-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery2/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery4/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery1/">jQuery-操作DOM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Lsiree<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

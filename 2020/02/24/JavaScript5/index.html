@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript浏览器对象 | Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、浏览器对象 window  属性   window对象不但充当全局作用域，而且表示浏览器窗口。   window.innerWidth和window.innerHeight：可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。  window.outerWidth和window.outerHeight属性，可以获取浏览器窗口的整个宽高。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript浏览器对象">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/JavaScript5/index.html">
+<meta property="og:site_name" content="Galaxy">
+<meta property="og:description" content="一、浏览器对象 window  属性   window对象不但充当全局作用域，而且表示浏览器窗口。   window.innerWidth和window.innerHeight：可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。  window.outerWidth和window.outerHeight属性，可以获取浏览器窗口的整个宽高。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-24T12:12:00.000Z">
+<meta property="article:modified_time" content="2020-02-24T12:33:19.715Z">
+<meta property="article:author" content="Lsiree">
+<meta property="article:tag" content="-JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Galaxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Galaxy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/24/JavaScript5/" class="article-date">
+  <time datetime="2020-02-24T12:12:00.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript浏览器对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、浏览器对象"><a href="#一、浏览器对象" class="headerlink" title="一、浏览器对象"></a>一、浏览器对象</h3><ol>
+<li>window  属性</li>
+</ol>
+<blockquote>
+<p>window对象不但充当全局作用域，而且表示浏览器窗口。</p>
+</blockquote>
+<ul>
+<li><p>window.innerWidth和window.innerHeight：可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。</p>
+</li>
+<li><p>window.outerWidth和window.outerHeight属性，可以获取浏览器窗口的整个宽高。</p>
+</li>
+</ul>
+<ol start="2">
+<li>navigator  属性</li>
+</ol>
+<blockquote>
+<p>navigator对象表示浏览器的信息，最常用的属性包括：</p>
+</blockquote>
+<p>navigator.appName：浏览器名称；<br>navigator.appVersion：浏览器版本；<br>navigator.language：浏览器设置的语言；<br>navigator.platform：操作系统类型；<br>navigator.userAgent：浏览器设定的User-Agent字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">navigator的信息可以很容易地被用户修改，所以JavaScript读取的值不一定是正确的</span><br><span class="line">var width;</span><br><span class="line">if (getIEVersion(navigator.userAgent) &lt; 9) &#123;</span><br><span class="line">    width &#x3D; document.body.clientWidth;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    width &#x3D; window.innerWidth;</span><br><span class="line">&#125;</span><br><span class="line">但这样既可能判断不准确，也很难维护代码。正确的方法是充分利用JavaScript对不存在属性返回undefined的特性，直接用短路运算符||计算：</span><br><span class="line"></span><br><span class="line">var width &#x3D; window.innerWidth || document.body.clientWidth;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>screen  属性</li>
+</ol>
+<blockquote>
+<p>screen对象表示屏幕的信息，常用的属性有：</p>
+</blockquote>
+<p>screen.width：屏幕宽度，以像素为单位；<br>screen.height：屏幕高度，以像素为单位；<br>screen.colorDepth：返回颜色位数，如8、16、24。  </p>
+<ol start="4">
+<li>location  对象<blockquote>
+<p>location对象表示当前页面的URL信息。</p>
+</blockquote>
+</li>
+</ol>
+<p>例如，一个完整的URL：<br><a href="http://www.example.com:8080/path/index.html?a=1&amp;b=2#TOP" target="_blank" rel="noopener">http://www.example.com:8080/path/index.html?a=1&amp;b=2#TOP</a><br>可以用location.href获取。要获得URL各个部分的值，可以这么写：</p>
+<p>location.protocol; // ‘http’<br>location.host; // ‘<a href="http://www.example.com&#39;" target="_blank" rel="noopener">www.example.com&#39;</a><br>location.port; // ‘8080’<br>location.pathname; // ‘/path/index.html’<br>location.search; // ‘?a=1&amp;b=2’<br>location.hash; // ‘TOP’<br>要加载一个新页面，可以调用location.assign(‘地址’)。<br>如果要重新加载当前页面，调用location.reload()方法非常方便。  </p>
+<ol start="5">
+<li>document  对象<blockquote>
+<p>document对象表示当前页面。由于HTML在浏览器中以DOM形式表示为树形结构，document对象就是整个DOM树的根节点。</p>
+</blockquote>
+</li>
+</ol>
+<p>document的title属性是从HTML文档中的<title>xxx</title>读取的，但是可以动态改变：  </p>
+<p>用document对象提供的getElementById()和getElementsByTagName()可以按ID获得一个DOM节点和按Tag名称获得一组DOM节点：</p>
+<p>JavaScript可以通过document.cookie读取到当前页面的Cookie：</p>
+<ol start="6">
+<li>history  对象<blockquote>
+<p>history对象保存了浏览器的历史记录，JavaScript可以调用history对象的back()或forward ()，相当于用户点击了浏览器的“后退”或“前进”按钮。</p>
+</blockquote>
+</li>
+</ol>
+<p>这个对象属于历史遗留对象，对于现代Web页面来说，由于大量使用AJAX和页面交互，简单粗暴地调用history.back()可能会让用户感到非常愤怒。</p>
+<p>新手开始设计Web页面时喜欢在登录页登录成功时调用history.back()，试图回到登录前的页面。这是一种错误的方法。</p>
+<p>任何情况，你都不应该使用history这个对象了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/24/JavaScript5/" data-id="ck791esxg000ipounfuf9enuo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/24/JavaScript6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JavaScript-操作DOM
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/24/JavaScript4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript面对对象编程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">-Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">-Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">-Git</a> <a href="/tags/JavaScript/" style="font-size: 20px;">-JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">-jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/27/jQuery5/">jQuery-编写插件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery3/">jQuery-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery2/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery4/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery1/">jQuery-操作DOM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Lsiree<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

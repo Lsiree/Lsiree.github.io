@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery-选择器 | Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一. 选择器jQuery对象类似数组，它的每个元素都是一个引用了DOM节点的对象，查找不到返回空数组。  id选择器： 1var div &#x3D; $(&#39;#abc&#39;);  类选择器： 12345var a &#x3D; $(&#39;.red&#39;); &#x2F;&#x2F; 所有包含&#96;class&#x3D;&quot;red&quot;&#96;的节点都将返回v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-选择器">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/jQuery/index.html">
+<meta property="og:site_name" content="Galaxy">
+<meta property="og:description" content="一. 选择器jQuery对象类似数组，它的每个元素都是一个引用了DOM节点的对象，查找不到返回空数组。  id选择器： 1var div &#x3D; $(&#39;#abc&#39;);  类选择器： 12345var a &#x3D; $(&#39;.red&#39;); &#x2F;&#x2F; 所有包含&#96;class&#x3D;&quot;red&quot;&#96;的节点都将返回v">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-25T14:22:00.000Z">
+<meta property="article:modified_time" content="2020-03-01T12:40:13.689Z">
+<meta property="article:author" content="Lsiree">
+<meta property="article:tag" content="-jQuery">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Galaxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Galaxy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/25/jQuery/" class="article-date">
+  <time datetime="2020-02-25T14:22:00.000Z" itemprop="datePublished">2020-02-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-选择器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一-选择器"><a href="#一-选择器" class="headerlink" title="一. 选择器"></a>一. 选择器</h3><p>jQuery对象类似数组，它的每个元素都是一个引用了DOM节点的对象，查找不到返回空数组。</p>
+<ol>
+<li><p>id选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var div &#x3D; $(&#39;#abc&#39;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; $(&#39;.red&#39;); &#x2F;&#x2F; 所有包含&#96;class&#x3D;&quot;red&quot;&#96;的节点都将返回</span><br><span class="line">var a &#x3D; $(&#39;.red.green&#39;); &#x2F;&#x2F; 查找同时具有两个类的元素，注意没有空格！</span><br><span class="line"></span><br><span class="line">var icons &#x3D; $(&#39;[class^&#x3D;&quot;icon-&quot;]&#39;); &#x2F;&#x2F; 找出所有class包含至少一个以&#96;icon-&#96;开头的DOM</span><br><span class="line">&#x2F;&#x2F; 例如: class&#x3D;&quot;icon-clock&quot;, class&#x3D;&quot;abc icon-home&quot;</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li><p>标签选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var ps &#x3D; $(&#39;p&#39;);   &#x2F;&#x2F; 返回所有&lt;p&gt;节点</span><br><span class="line"></span><br><span class="line">ps.length;       &#x2F;&#x2F;页面&lt;p&gt;节点个数</span><br></pre></td></tr></table></figure></li>
+<li><p>按属性查找</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">一个DOM节点除了id和class外还可以有很多属性，很多时候按属性查找会非常方便，比如在一个表单中按属性来查找：</span><br><span class="line"></span><br><span class="line">var email &#x3D; $(&#39;[name&#x3D;email]&#39;);       &#x2F;&#x2F; 找出&lt; name&#x3D;&quot;email&quot;&gt;</span><br><span class="line"></span><br><span class="line">var passwordInput &#x3D; $(&#39;[type&#x3D;password]&#39;);     &#x2F;&#x2F; 找出&lt; type&#x3D;&quot;password&quot;&gt;</span><br><span class="line"></span><br><span class="line">var a &#x3D; $(&#39;[items&#x3D;&quot;A B&quot;]&#39;); &#x2F;&#x2F; 找出&lt;??? items&#x3D;&quot;A B&quot;&gt;</span><br><span class="line">当属性的值包含空格等特殊字符时，需要用双引号括起来。</span><br><span class="line"></span><br><span class="line">按属性查找还可以使用前缀查找或者后缀查找：</span><br><span class="line"></span><br><span class="line">var icons &#x3D; $(&#39;[name^&#x3D;icon]&#39;); &#x2F;&#x2F; 找出所有name属性值以icon开头的DOM</span><br><span class="line">&#x2F;&#x2F; 例如: name&#x3D;&quot;icon-1&quot;, name&#x3D;&quot;icon-2&quot;</span><br><span class="line">var names &#x3D; $(&#39;[name$&#x3D;with]&#39;); &#x2F;&#x2F; 找出所有name属性值以with结尾的DOM</span><br><span class="line">&#x2F;&#x2F; 例如: name&#x3D;&quot;startswith&quot;, name&#x3D;&quot;endswith&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>交集选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">组合查找就是把上述简单选择器组合起来使用。如果我们查找$(&#39;[name&#x3D;email]&#39;)，很可能把表单外的&lt;div name&#x3D;&quot;email&quot;&gt;也找出来，但我们只希望查找&lt;input&gt;，就可以这么写：</span><br><span class="line"></span><br><span class="line">var emailInput &#x3D; $(&#39;input[name&#x3D;email]&#39;); &#x2F;&#x2F; 不会找出&lt;div name&#x3D;&quot;email&quot;&gt;</span><br><span class="line"></span><br><span class="line">同样的，根据tag和class来组合查找也很常见：</span><br><span class="line">var tr &#x3D; $(&#39;tr.red&#39;); &#x2F;&#x2F; 找出&lt;tr class&#x3D;&quot;red ...&quot;&gt;...&lt;&#x2F;tr&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>并集选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;p,div&#39;); &#x2F;&#x2F; 把&lt;p&gt;和&lt;div&gt;都选出来</span><br><span class="line">$(&#39;p.red,p.green&#39;); &#x2F;&#x2F; 把&lt;p class&#x3D;&quot;red&quot;&gt;和&lt;p class&#x3D;&quot;green&quot;&gt;都选出来</span><br><span class="line"></span><br><span class="line">选出来的元素是按照它们在HTML中出现的顺序排列的，且不会有重复元素。例如，&lt;p class&#x3D;&quot;red green&quot;&gt;不会被上面的$(&#39;p.red,p.green&#39;)选择两次。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p> HTML结构如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;testing&quot;&gt;</span><br><span class="line">    &lt;ul class&#x3D;&quot;lang&quot;&gt;</span><br><span class="line">        &lt;li class&#x3D;&quot;lang-javascript&quot;&gt;JavaScript&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li class&#x3D;&quot;lang-python&quot;&gt;Python&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li class&#x3D;&quot;lang-lua&quot;&gt;Lua&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li><p>层级选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;ul.lang li.lang-javascript&#39;); </span><br><span class="line">&#x2F;&#x2F; [&lt;li class&#x3D;&quot;lang-javascript&quot;&gt;JavaScript&lt;&#x2F;li&gt;]</span><br><span class="line"></span><br><span class="line">$(&#39;div.testing li.lang-javascript&#39;); &#x2F;&#x2F; [&lt;li class&#x3D;&quot;lang-javascript&quot;&gt;JavaScript&lt;&#x2F;li&gt;]</span><br></pre></td></tr></table></figure></li>
+<li><p>子选择器（Child Selector）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">子选择器$(&#39;parent&gt;child&#39;)类似层级选择器，但是限定了层级关系必须是父子关系，就是&lt;child&gt;节点必须是&lt;parent&gt;节点的直属子节点。</span><br><span class="line"></span><br><span class="line">$(&#39;ul.lang&gt;li.lang-javascript&#39;);</span><br><span class="line"> &#x2F;&#x2F; 可以选出[&lt;li class&#x3D;&quot;lang-javascript&quot;&gt;JavaScript&lt;&#x2F;li&gt;]</span><br><span class="line"></span><br><span class="line">$(&#39;div.testing&gt;li.lang-javascript&#39;); &#x2F;&#x2F; [], 无法选出，因为&lt;div&gt;和&lt;li&gt;不构成父子关系</span><br></pre></td></tr></table></figure></li>
+<li><p>过滤器（Filter）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">过滤器一般不单独使用，它通常附加在选择器上，帮助我们更精确地定位元素。</span><br><span class="line"></span><br><span class="line">$(&#39;ul.lang li&#39;); &#x2F;&#x2F; 选出JavaScript、Python和Lua 3个节点</span><br><span class="line"></span><br><span class="line">$(&#39;ul.lang li:first-child&#39;); &#x2F;&#x2F; 仅选出JavaScript</span><br><span class="line">$(&#39;ul.lang li:last-child&#39;); &#x2F;&#x2F; 仅选出Lua</span><br><span class="line">$(&#39;ul.lang li:nth-child(2)&#39;); &#x2F;&#x2F; 选出第N个元素，N从1开始</span><br><span class="line">$(&#39;ul.lang li:nth-child(even)&#39;); &#x2F;&#x2F; 选出序号为偶数的元素</span><br><span class="line">$(&#39;ul.lang li:nth-child(odd)&#39;); &#x2F;&#x2F; 选出序号为奇数的元素</span><br></pre></td></tr></table></figure></li>
+<li><p>表单相关</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">针对表单元素，jQuery还有一组特殊的选择器：</span><br><span class="line"></span><br><span class="line">:input：可以选择&lt;input&gt;，&lt;textarea&gt;，&lt;select&gt;和&lt;button&gt;；</span><br><span class="line"></span><br><span class="line">:file：可以选择&lt;input type&#x3D;&quot;file&quot;&gt;，和input[type&#x3D;file]一样；</span><br><span class="line"></span><br><span class="line">:checkbox：可以选择复选框，和input[type&#x3D;checkbox]一样；</span><br><span class="line"></span><br><span class="line">:radio：可以选择单选框，和input[type&#x3D;radio]一样；</span><br><span class="line"></span><br><span class="line">:focus：可以选择当前输入焦点的元素，例如把光标放到一个&lt;input&gt;上，用$(&#39;input:focus&#39;)就可以选出；</span><br><span class="line"></span><br><span class="line">:checked：选择当前勾上的单选框和复选框，用这个选择器可以立刻获得用户选择的项目，如$(&#39;input[type&#x3D;radio]:checked&#39;)；</span><br><span class="line"></span><br><span class="line">:enabled：可以选择可以正常输入的&lt;input&gt;、&lt;select&gt; 等，也就是没有灰掉的输入；</span><br><span class="line"></span><br><span class="line">:disabled：和:enabled正好相反，选择那些不能输入的。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选出可见的或隐藏的元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;div:visible&#39;); &#x2F;&#x2F; 所有可见的div</span><br><span class="line">$(&#39;div:hidden&#39;); &#x2F;&#x2F; 所有隐藏的div</span><br></pre></td></tr></table></figure></li>
+<li><p>用find()查找：</p>
+</li>
+</ol>
+<p>父级元素查找子元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var ul &#x3D; $(&#39;ul.lang&#39;); &#x2F;&#x2F; 获得&lt;ul&gt;</span><br><span class="line">var dy &#x3D; ul.find(&#39;.dy&#39;); &#x2F;&#x2F; 获得JavaScript, Python, Scheme</span><br><span class="line">var swf &#x3D; ul.find(&#39;#swift&#39;); &#x2F;&#x2F; 获得Swift</span><br><span class="line">var hsk &#x3D; ul.find(&#39;[name&#x3D;haskell]&#39;); &#x2F;&#x2F; 获得Haskell</span><br></pre></td></tr></table></figure>
+<p>子元素查找父元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用parent()方法：</span><br><span class="line"></span><br><span class="line">var swf &#x3D; $(&#39;#swift&#39;); &#x2F;&#x2F; 获得Swift</span><br><span class="line">var parent &#x3D; swf.parent(); &#x2F;&#x2F; 获得Swift的上层节点&lt;ul&gt;</span><br><span class="line"></span><br><span class="line">var a &#x3D; swf.parent(&#39;.red&#39;);</span><br><span class="line">&#x2F;&#x2F; 获得Swift的上层节点&lt;ul&gt;，同时传入过滤条件。如果ul不符合条件，返回空jQuery对象</span><br></pre></td></tr></table></figure>
+<p>同级查找：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">通过next()和prev()方法，例如：</span><br><span class="line"></span><br><span class="line">var swift &#x3D; $(&#39;#swift&#39;);</span><br><span class="line">swift.next(); &#x2F;&#x2F; Scheme</span><br><span class="line"></span><br><span class="line">swift.next(&#39;[name&#x3D;haskell]&#39;); </span><br><span class="line">&#x2F;&#x2F; 空的jQuery对象，因为Swift的下一个元素Scheme不符合条件[name&#x3D;haskell]</span><br><span class="line"></span><br><span class="line">swift.prev(); &#x2F;&#x2F; Python</span><br><span class="line">swift.prev(&#39;.dy&#39;); &#x2F;&#x2F; Python，因为Python同时符合过滤器条件.dy</span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>过滤<br>filter()方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">filter()方法可以过滤掉不符合选择器条件的节点：</span><br><span class="line"></span><br><span class="line">var langs &#x3D; $(&#39;ul.lang li&#39;); &#x2F;&#x2F; 拿到.lang下的ul的li元素</span><br><span class="line">var a &#x3D; langs.filter(&#39;.dy&#39;); &#x2F;&#x2F; 拿到.dy类</span><br><span class="line"></span><br><span class="line">可以传入一个函数，函数内部的this被绑定为DOM对象，不是jQuery对象：</span><br><span class="line"></span><br><span class="line">langs.filter(function () &#123;</span><br><span class="line">    return this.innerHTML.indexOf(&#39;S&#39;) &#x3D;&#x3D;&#x3D; 0; &#x2F;&#x2F; 返回S开头的节点</span><br><span class="line">&#125;);     </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 拿到Swift, Scheme</span><br></pre></td></tr></table></figure>
+map()方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">map()方法把一个jQuery对象包含的若干DOM节点转化为其他对象：</span><br><span class="line"></span><br><span class="line">var arr &#x3D; langs.map(function () &#123;</span><br><span class="line">    return this.innerHTML;</span><br><span class="line">&#125;).get();</span><br><span class="line"> &#x2F;&#x2F; 用get()拿到包含string的Array：[&#39;JavaScript&#39;, &#39;Python&#39;, &#39;Swift&#39;, &#39;Scheme&#39;, &#39;Haskell&#39;]</span><br><span class="line"></span><br><span class="line">此外，一个jQuery对象如果包含了不止一个DOM节点，first()、last()和slice()方法可以返回一个新的jQuery对象，把不需要的DOM节点去掉：</span><br><span class="line"></span><br><span class="line">var langs &#x3D; $(&#39;ul.lang li&#39;); &#x2F;&#x2F; 拿到JavaScript, Python, Swift, Scheme和Haskell</span><br><span class="line"></span><br><span class="line">var js &#x3D; langs.first(); &#x2F;&#x2F; JavaScript，相当于$(&#39;ul.lang li:first-child&#39;)</span><br><span class="line"></span><br><span class="line">var haskell &#x3D; langs.last(); &#x2F;&#x2F; Haskell, 相当于$(&#39;ul.lang li:last-child&#39;)</span><br><span class="line"></span><br><span class="line">var sub &#x3D; langs.slice(2, 4); &#x2F;&#x2F; Swift, Scheme, 参数和数组的slice()方法一致</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/25/jQuery/" data-id="ck791esxp0018poun1m3w8m1b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/26/jQuery1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery-操作DOM
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/25/JavaScript8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript标准对象</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">-Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">-Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">-Git</a> <a href="/tags/JavaScript/" style="font-size: 20px;">-JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">-jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/27/jQuery5/">jQuery-编写插件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery3/">jQuery-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery2/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery4/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery1/">jQuery-操作DOM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Lsiree<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript操作表单和文件 | Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、操作表单 HTML表单的输入控件主要有以下几种：1234567891011文本框，对应的&lt;input type&#x3D;&quot;text&quot;&gt;，用于输入文本；口令框，对应的&lt;input type&#x3D;&quot;password&quot;&gt;，用于输入口令；单选框，对应的&lt;input type&#x3D;&quot;radio&quot;&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript操作表单和文件">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/JavaScript7/index.html">
+<meta property="og:site_name" content="Galaxy">
+<meta property="og:description" content="一、操作表单 HTML表单的输入控件主要有以下几种：1234567891011文本框，对应的&lt;input type&#x3D;&quot;text&quot;&gt;，用于输入文本；口令框，对应的&lt;input type&#x3D;&quot;password&quot;&gt;，用于输入口令；单选框，对应的&lt;input type&#x3D;&quot;radio&quot;&amp;gt">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-25T05:40:00.000Z">
+<meta property="article:modified_time" content="2020-02-25T06:12:42.958Z">
+<meta property="article:author" content="Lsiree">
+<meta property="article:tag" content="-JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Galaxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Galaxy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/25/JavaScript7/" class="article-date">
+  <time datetime="2020-02-25T05:40:00.000Z" itemprop="datePublished">2020-02-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript操作表单和文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、操作表单"><a href="#一、操作表单" class="headerlink" title="一、操作表单"></a>一、操作表单</h3><ol>
+<li>HTML表单的输入控件主要有以下几种：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">文本框，对应的&lt;input type&#x3D;&quot;text&quot;&gt;，用于输入文本；</span><br><span class="line"></span><br><span class="line">口令框，对应的&lt;input type&#x3D;&quot;password&quot;&gt;，用于输入口令；</span><br><span class="line"></span><br><span class="line">单选框，对应的&lt;input type&#x3D;&quot;radio&quot;&gt;，用于选择一项；</span><br><span class="line"></span><br><span class="line">复选框，对应的&lt;input type&#x3D;&quot;checkbox&quot;&gt;，用于选择多项；</span><br><span class="line"></span><br><span class="line">下拉框，对应的&lt;select&gt;，用于选择一项；</span><br><span class="line"></span><br><span class="line">隐藏文本，对应的&lt;input type&#x3D;&quot;hidden&quot;&gt;，用户不可见，但表单提交时会把隐藏文本发送到服务器。</span><br></pre></td></tr></table></figure></li>
+<li>获取值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">如果我们获得了一个&lt;input&gt;节点的引用，就可以直接调用value获得对应的用户输入值：</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;email&quot;&gt;</span><br><span class="line">var input &#x3D; document.getElementById(&#39;email&#39;);</span><br><span class="line">input.value; &#x2F;&#x2F; &#39;用户输入的值&#39;</span><br><span class="line"></span><br><span class="line">这种方式可以应用于text、password、hidden以及select。</span><br><span class="line"></span><br><span class="line">单选框和复选框，value属性返回的永远是HTML预设的值，用checked判断：</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; &lt;label&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;weekday&quot; id&#x3D;&quot;monday&quot; value&#x3D;&quot;1&quot;&gt; Monday&lt;&#x2F;label&gt;</span><br><span class="line">&#x2F;&#x2F; &lt;label&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;weekday&quot; id&#x3D;&quot;tuesday&quot; value&#x3D;&quot;2&quot;&gt; Tuesday&lt;&#x2F;label&gt;</span><br><span class="line">var mon &#x3D; document.getElementById(&#39;monday&#39;);</span><br><span class="line">var tue &#x3D; document.getElementById(&#39;tuesday&#39;);</span><br><span class="line">mon.value; &#x2F;&#x2F; &#39;1&#39;</span><br><span class="line">tue.value; &#x2F;&#x2F; &#39;2&#39;</span><br><span class="line">mon.checked; &#x2F;&#x2F; true或者false</span><br><span class="line">tue.checked; &#x2F;&#x2F; true或者false</span><br></pre></td></tr></table></figure></li>
+<li>设置值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">设置值和获取值类似，对于text、password、hidden以及select，直接设置value就可以：</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;email&quot;&gt;</span><br><span class="line">var input &#x3D; document.getElementById(&#39;email&#39;);</span><br><span class="line">input.value &#x3D; &#39;test@example.com&#39;; &#x2F;&#x2F; 文本框的内容已更新</span><br><span class="line">对于单选框和复选框，设置checked为true或false即可。</span><br></pre></td></tr></table></figure></li>
+<li>HTML5控件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">HTML5新增了大量标准控件，常用的包括date、datetime、datetime-local、color等，它们都使用&lt;input&gt;标签：</span><br><span class="line"></span><br><span class="line">&lt;input type&#x3D;&quot;date&quot; value&#x3D;&quot;2015-07-01&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type&#x3D;&quot;datetime-local&quot; value&#x3D;&quot;2015-07-01T02:03:04&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type&#x3D;&quot;color&quot; value&#x3D;&quot;#ff0000&quot;&gt;</span><br><span class="line"></span><br><span class="line">不支持HTML5的浏览器无法识别新的控件，会把它们当做type&#x3D;&quot;text&quot;来显示。支持HTML5的浏览器将获得格式化的字符串。例如，type&#x3D;&quot;date&quot;类型的input的value将保证是一个有效的YYYY-MM-DD格式的日期，或者空字符串。</span><br></pre></td></tr></table></figure></li>
+<li>提交表单<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">最后，JavaScript可以以两种方式来处理表单的提交（AJAX方式在后面章节介绍）。</span><br><span class="line"></span><br><span class="line">方式一是通过&lt;form&gt;元素的submit()方法提交一个表单，例如，响应一个&lt;button&gt;的click事件，在JavaScript代码中提交表单：</span><br><span class="line"></span><br><span class="line">&lt;!-- HTML --&gt;</span><br><span class="line">&lt;form id&#x3D;&quot;test-form&quot;&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;test&quot;&gt;</span><br><span class="line">    &lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;doSubmitForm()&quot;&gt;Submit&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function doSubmitForm() &#123;</span><br><span class="line">    var form &#x3D; document.getElementById(&#39;test-form&#39;);</span><br><span class="line">    &#x2F;&#x2F; 可以在此修改form的input...</span><br><span class="line">    &#x2F;&#x2F; 提交form:</span><br><span class="line">    form.submit();</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">这种方式的缺点是扰乱了浏览器对form的正常提交。浏览器默认点击&lt;button type&#x3D;&quot;submit&quot;&gt;时提交表单，或者用户在最后一个输入框按回车键。因此，第二种方式是响应&lt;form&gt;本身的onsubmit事件，在提交form时作修改：</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function checkForm() &#123;</span><br><span class="line">    var form &#x3D; document.getElementById(&#39;test-form&#39;);</span><br><span class="line">    &#x2F;&#x2F; 可以在此修改form的input...</span><br><span class="line">    &#x2F;&#x2F; 继续下一步:</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">注意要return true来告诉浏览器继续提交，如果return false，浏览器将不会继续提交form，这种情况通常对应用户输入有误，提示用户错误信息后终止提交form。</span><br></pre></td></tr></table></figure></li>
+<li>表单安全性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">在检查和修改&lt;input&gt;时，要充分利用&lt;input type&#x3D;&quot;hidden&quot;&gt;来传递数据。</span><br><span class="line"></span><br><span class="line">例如，很多登录表单希望用户输入用户名和口令，但是，安全考虑，提交表单时不传输明文口令，而是口令的MD5。普通JavaScript开发人员会直接修改&lt;input&gt;：</span><br><span class="line"></span><br><span class="line">要想不改变用户的输入，可以利用&lt;input type&#x3D;&quot;hidden&quot;&gt;实现：</span><br><span class="line"></span><br><span class="line">&lt;!-- HTML --&gt;</span><br><span class="line">&lt;form id&#x3D;&quot;login-form&quot; method&#x3D;&quot;post&quot; onsubmit&#x3D;&quot;return checkForm()&quot;&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;username&quot; name&#x3D;&quot;username&quot;&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;input-password&quot;&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;hidden&quot; id&#x3D;&quot;md5-password&quot; name&#x3D;&quot;password&quot;&gt;</span><br><span class="line">    &lt;button type&#x3D;&quot;submit&quot;&gt;Submit&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function checkForm() &#123;</span><br><span class="line">    var pwd &#x3D; document.getElementById(&#39;password&#39;);</span><br><span class="line">    &#x2F;&#x2F; 把用户输入的明文变为MD5:</span><br><span class="line">    pwd.value &#x3D; toMD5(pwd.value);</span><br><span class="line">    &#x2F;&#x2F; 继续下一步:</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">这个做法看上去没啥问题，但用户输入了口令提交时，口令框的显示会突然从几个*变成32个*（因为MD5有32个字符）。</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function checkForm() &#123;</span><br><span class="line">    var input_pwd &#x3D; document.getElementById(&#39;input-password&#39;);</span><br><span class="line">    var md5_pwd &#x3D; document.getElementById(&#39;md5-password&#39;);</span><br><span class="line">    &#x2F;&#x2F; 把用户输入的明文变为MD5:</span><br><span class="line">    md5_pwd.value &#x3D; toMD5(input_pwd.value);</span><br><span class="line">    &#x2F;&#x2F; 继续下一步:</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">注意到id为md5-password的&lt;input&gt;标记了name&#x3D;&quot;password&quot;，而用户输入的id为input-password的&lt;input&gt;没有name属性。没有name属性的&lt;input&gt;的数据不会被提交。</span><br></pre></td></tr></table></figure>
+<h3 id="二、操作文件"><a href="#二、操作文件" class="headerlink" title="二、操作文件"></a>二、操作文件</h3></li>
+<li><blockquote>
+<p>通常，上传的文件都由后台服务器处理，JavaScript可以在提交表单时对文件扩展名做检查，以便防止用户上传无效格式的文件：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var f &#x3D; document.getElementById(&#39;test-file-upload&#39;);</span><br><span class="line">var filename &#x3D; f.value; &#x2F;&#x2F; &#39;C:\fakepath\test.png&#39;</span><br><span class="line">if (!filename || !(filename.endsWith(&#39;.jpg&#39;) || filename.endsWith(&#39;.png&#39;) || filename.endsWith(&#39;.gif&#39;))) &#123;</span><br><span class="line">    alert(&#39;Can only upload image file.&#39;);</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>File API</li>
+</ol>
+<p>随着HTML5的普及，新增的File API允许JavaScript读取文件内容，获得更多的文件信息。</p>
+<p>HTML5的File API提供了File和FileReader两个主要对象，可以获得文件信息并读取文件。</p>
+<p>下面的例子演示了如何读取用户选取的图片文件，并在一个盒子中预览图像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var</span><br><span class="line">    fileInput &#x3D; document.getElementById(&#39;test-image-file&#39;),</span><br><span class="line">    info &#x3D; document.getElementById(&#39;test-file-info&#39;),</span><br><span class="line">    preview &#x3D; document.getElementById(&#39;test-image-preview&#39;);</span><br><span class="line">&#x2F;&#x2F; 监听change事件:</span><br><span class="line">fileInput.addEventListener(&#39;change&#39;, function () &#123;</span><br><span class="line">    &#x2F;&#x2F; 清除背景图片:</span><br><span class="line">    preview.style.backgroundImage &#x3D; &#39;&#39;;</span><br><span class="line">    &#x2F;&#x2F; 检查文件是否选择:</span><br><span class="line">    if (!fileInput.value) &#123;</span><br><span class="line">        info.innerHTML &#x3D; &#39;没有选择文件&#39;;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 获取File引用:</span><br><span class="line">    var file &#x3D; fileInput.files[0];</span><br><span class="line">    &#x2F;&#x2F; 获取File信息:</span><br><span class="line">    info.innerHTML &#x3D; &#39;文件: &#39; + file.name + &#39;&lt;br&gt;&#39; +</span><br><span class="line">                     &#39;大小: &#39; + file.size + &#39;&lt;br&gt;&#39; +</span><br><span class="line">                     &#39;修改: &#39; + file.lastModifiedDate;</span><br><span class="line">    if (file.type !&#x3D;&#x3D; &#39;image&#x2F;jpeg&#39; &amp;&amp; file.type !&#x3D;&#x3D; &#39;image&#x2F;png&#39; &amp;&amp; file.type !&#x3D;&#x3D; &#39;image&#x2F;gif&#39;) &#123;</span><br><span class="line">        alert(&#39;不是有效的图片文件!&#39;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 读取文件:</span><br><span class="line">    var reader &#x3D; new FileReader();</span><br><span class="line">    reader.onload &#x3D; function(e) &#123;</span><br><span class="line">        var</span><br><span class="line">            data &#x3D; e.target.result; &#x2F;&#x2F; &#39;data:image&#x2F;jpeg;base64,&#x2F;9j&#x2F;4AAQSk...(base64编码)...&#39;            </span><br><span class="line">        preview.style.backgroundImage &#x3D; &#39;url(&#39; + data + &#39;)&#39;;</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;&#x2F; 以DataURL的形式读取文件:</span><br><span class="line">    reader.readAsDataURL(file);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面的代码演示了如何通过HTML5的File API读取文件内容。以DataURL的形式读取到的文件是一个字符串，类似于data:image/jpeg;base64,/9j/4AAQSk…(base64编码)…，常用于设置图像。如果需要服务器端处理，把字符串base64,后面的字符发送给服务器并用Base64解码就可以得到原始文件的二进制内容。</p>
+<ol start="3">
+<li>回调</li>
+</ol>
+<p>上面的代码还演示了JavaScript的一个重要的特性就是单线程执行模式。在JavaScript中，浏览器的JavaScript执行引擎在执行JavaScript代码时，总是以单线程模式执行，也就是说，任何时候，JavaScript代码都不可能同时有多于1个线程在执行。</p>
+<p>你可能会问，单线程模式执行的JavaScript，如何处理多任务？</p>
+<p>在JavaScript中，执行多任务实际上都是异步调用，比如上面的代码：</p>
+<p>reader.readAsDataURL(file);<br>就会发起一个异步操作来读取文件内容。因为是异步操作，所以我们在JavaScript代码中就不知道什么时候操作结束，因此需要先设置一个回调函数：</p>
+<p>reader.onload = function(e) {<br>    // 当文件读取完成后，自动调用此函数:<br>};<br>当文件读取完成后，JavaScript引擎将自动调用我们设置的回调函数。执行回调函数时，文件已经读取完毕，所以我们可以在回调函数内部安全地获得文件内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/25/JavaScript7/" data-id="ck791esxj000ppounctxg09iq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/25/JavaScript8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JavaScript标准对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/24/JavaScript6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript-操作DOM</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">-Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">-Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">-Git</a> <a href="/tags/JavaScript/" style="font-size: 20px;">-JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">-jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/27/jQuery5/">jQuery-编写插件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery3/">jQuery-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery2/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery4/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery1/">jQuery-操作DOM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Lsiree<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

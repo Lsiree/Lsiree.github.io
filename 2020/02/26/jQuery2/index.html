@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery-事件 | Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、事件 事件函数写法123456789on方法用来绑定一个事件，我们需要传入事件名称和对应的处理函数。a.on(&#39;click&#39;, function () &amp;#123;    alert(&#39;Hello!&#39;);&amp;#125;);直接调用click()方法：a.click(function () &amp;#123;    alert(&#39;Hello!&#39;);&amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-事件">
+<meta property="og:url" content="http://yoursite.com/2020/02/26/jQuery2/index.html">
+<meta property="og:site_name" content="Galaxy">
+<meta property="og:description" content="一、事件 事件函数写法123456789on方法用来绑定一个事件，我们需要传入事件名称和对应的处理函数。a.on(&#39;click&#39;, function () &amp;#123;    alert(&#39;Hello!&#39;);&amp;#125;);直接调用click()方法：a.click(function () &amp;#123;    alert(&#39;Hello!&#39;);&amp;#12">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-26T07:37:00.000Z">
+<meta property="article:modified_time" content="2020-03-01T12:40:15.876Z">
+<meta property="article:author" content="Lsiree">
+<meta property="article:tag" content="-jQuery">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Galaxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Galaxy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/jQuery2/" class="article-date">
+  <time datetime="2020-02-26T07:37:00.000Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-事件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、事件"><a href="#一、事件" class="headerlink" title="一、事件"></a>一、事件</h4><ol>
+<li>事件函数写法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">on方法用来绑定一个事件，我们需要传入事件名称和对应的处理函数。</span><br><span class="line">a.on(&#39;click&#39;, function () &#123;</span><br><span class="line">    alert(&#39;Hello!&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">直接调用click()方法：</span><br><span class="line">a.click(function () &#123;</span><br><span class="line">    alert(&#39;Hello!&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>事件</li>
+</ol>
+<ul>
+<li>鼠标事件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">click: 鼠标单击时触发；</span><br><span class="line">dblclick：鼠标双击时触发；</span><br><span class="line">mouseenter：鼠标进入时触发；</span><br><span class="line">mouseleave：鼠标移出时触发；</span><br><span class="line">mousemove：鼠标在DOM内部移动时触发；</span><br><span class="line">hover：鼠标进入和退出时触发两个函数，相当于mouseenter加上mouseleave。</span><br></pre></td></tr></table></figure></li>
+<li>键盘事件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">键盘事件仅作用在当前焦点的DOM上，通常是&lt;input&gt;和&lt;textarea&gt;。</span><br><span class="line"></span><br><span class="line">keydown：键盘按下时触发；</span><br><span class="line">keyup：键盘松开时触发；</span><br><span class="line">keypress：按一次键后触发。</span><br></pre></td></tr></table></figure></li>
+<li>其他事件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">focus：当DOM获得焦点时触发；</span><br><span class="line">blur：当DOM失去焦点时触发；</span><br><span class="line">change：当&lt;input&gt;、&lt;select&gt;或&lt;textarea&gt;的内容改变时触发；</span><br><span class="line">submit：当&lt;form&gt;提交时触发；</span><br><span class="line">ready：当页面被载入并且DOM树完成初始化后触发。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>初始化事件ready()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        &#x2F;&#x2F; 代码有误:</span><br><span class="line">        $(&#39;#testForm).on(&#39;submit&#39;, function () &#123;</span><br><span class="line">            alert(&#39;submit!&#39;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;form id&#x3D;&quot;testForm&quot;&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line">JavaScript在此执行的时候，&lt;form&gt;尚未载入浏览器，所以$(&#39;#testForm)返回[]，并没有绑定事件到任何DOM上。</span><br><span class="line"></span><br><span class="line">初始化代码必须放到document对象的ready事件中，保证DOM已完成初始化：</span><br><span class="line"></span><br><span class="line"> $(document).on(&#39;ready&#39;, function () &#123;</span><br><span class="line">    $(&#39;#testForm).on(&#39;submit&#39;, function () &#123;</span><br><span class="line">        alert(&#39;submit!&#39;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">简化：</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    &#x2F;&#x2F; init...</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">再简化为：</span><br><span class="line">$(function () &#123;</span><br><span class="line">    &#x2F;&#x2F; init...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>事件参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">有些事件，如mousemove和keypress，我们需要获取鼠标位置和按键的值。所有事件都会传入Event对象作为参数，可以从Event对象上获取到更多的信息：</span><br><span class="line"></span><br><span class="line">$(function () &#123;</span><br><span class="line">    $(&#39;#testMouseMoveDiv&#39;).mousemove(function (e) &#123;</span><br><span class="line">        $(&#39;#testMouseMoveSpan&#39;).text(&#39;pageX &#x3D; &#39; + e.pageX + &#39;, pageY &#x3D; &#39; + e.pageY);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>取消绑定</li>
+</ol>
+<p>off(‘click’, function)实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function hello() &#123;</span><br><span class="line">    alert(&#39;hello!&#39;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a.click(hello); &#x2F;&#x2F; 绑定事件</span><br><span class="line"></span><br><span class="line">a.off(&#39;click&#39;, hello); &#x2F;&#x2F;解除绑定</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 10秒钟后解除绑定:</span><br><span class="line">setTimeout(function () &#123;</span><br><span class="line">    a.off(&#39;click&#39;, hello);</span><br><span class="line">&#125;, 10000);</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>事件触发条件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">用代码触发change事件，可以直接调用无参数的change()方法来触发该事件：</span><br><span class="line"></span><br><span class="line">input.trigger(&#39;change&#39;)  &#x2F;&#x2F; 触发change事件</span><br><span class="line">input.change();    &#x2F;&#x2F; 简写</span><br><span class="line"></span><br><span class="line">如果用JavaScript代码去改动文本框的值，将不会触发change事件：</span><br><span class="line"></span><br><span class="line">var input &#x3D; $(&#39;#test-input&#39;);</span><br><span class="line">input.val(&#39;change it!&#39;); &#x2F;&#x2F; 无法触发change事件</span><br></pre></td></tr></table></figure></li>
+<li>浏览器安全限制<pre><code>在浏览器中，有些JavaScript代码只有在用户触发下才能执行，例如，window.open()函数：
+</code></pre></li>
+</ol>
+<p>// 无法弹出新窗口，将被浏览器屏蔽:<br>$(function () {<br>    window.open(‘/‘);<br>});</p>
+<p>这些“敏感代码”只能由用户操作来触发：<br>button1.click(function () {<br>    popupTestWindow();<br>});</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/jQuery2/" data-id="ck791esxp0015poun1wa93ag1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/26/jQuery3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery-动画
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/26/jQuery4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery-事件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">-Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">-Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">-JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">-jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">-Git</a> <a href="/tags/JavaScript/" style="font-size: 20px;">-JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">-jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/27/jQuery5/">jQuery-编写插件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery3/">jQuery-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery2/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery4/">jQuery-事件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/26/jQuery1/">jQuery-操作DOM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Lsiree<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
