@@ -154,6 +154,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/JavaScript6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lsiree">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Galaxy">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/24/JavaScript6/" class="post-title-link" itemprop="url">JavaScript-操作DOM</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-24 20:34:00" itemprop="dateCreated datePublished" datetime="2020-02-24T20:34:00+08:00">2020-02-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-09 21:26:11" itemprop="dateModified" datetime="2020-03-09T21:26:11+08:00">2020-03-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">-JavaScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、查找DOM"><a href="#一、查找DOM" class="headerlink" title="一、查找DOM"></a>一、查找DOM</h3><p>要精确地选择DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById() 查找相应id</span><br><span class="line">document.getElementsByTagName()  查找相应标签</span><br><span class="line">document.getElementsByClassName()  查找相应类</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 返回ID为&#39;test&#39;的节点：</span><br><span class="line">var test &#x3D; document.getElementById(&#39;test&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 先定位ID为&#39;test-table&#39;的节点，再返回其内部所有tr节点：</span><br><span class="line">var trs &#x3D; document.getElementById(&#39;test-table&#39;).getElementsByTagName(&#39;tr&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 先定位ID为&#39;test-div&#39;的节点，再返回其内部所有class包含red的节点：</span><br><span class="line">var reds &#x3D; document.getElementById(&#39;test-div&#39;).getElementsByClassName(&#39;red&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取节点test下的所有直属子节点:</span><br><span class="line">var cs &#x3D; test.children;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取节点test下第一个、最后一个子节点：</span><br><span class="line">var first &#x3D; test.firstElementChild;</span><br><span class="line">var last &#x3D; test.lastElementChild;</span><br><span class="line"></span><br><span class="line">第二种方法是使用querySelector()和querySelectorAll()，需要了解selector语法，然后使用条件来获取节点，更加方便：</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 通过querySelector获取ID为q1的节点：</span><br><span class="line">var q1 &#x3D; document.querySelector(&#39;#q1&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 通过querySelectorAll获取q1节点内的符合条件的所有节点：</span><br><span class="line">var ps &#x3D; q1.querySelectorAll(&#39;div.highlighted &gt; p&#39;);</span><br><span class="line">注意：低版本的IE&lt;8不支持querySelector和querySelectorAll。IE8仅有限支持。</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/02/24/JavaScript6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/JavaScript5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -936,92 +1018,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/16/Git1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Lsiree">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Galaxy">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/Git1/" class="post-title-link" itemprop="url">GitHub与本地建立连接</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-16 13:14:00" itemprop="dateCreated datePublished" datetime="2020-02-16T13:14:00+08:00">2020-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-23 21:22:20" itemprop="dateModified" datetime="2020-02-23T21:22:20+08:00">2020-02-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">-Blog</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="一、获取密钥"><a href="#一、获取密钥" class="headerlink" title="一、获取密钥"></a>一、获取密钥</h3><ol>
-<li><p>在git指令框中输入ssh-keygen  </p>
-</li>
-<li><p>将显示的地址下的PUB文件用记事本打开并复制</p>
-</li>
-<li><p>在github的settings的SSH and GPG keys选项连接SSH keys</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/16/Git1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1092,20 +1088,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
